@@ -1,0 +1,61 @@
+﻿<div class="terrabec-overview" ng-controller="terrabec.email as vm" ng-init="vm.init(false)">
+	<div class="umb-dialog" ng-form="createList">
+		<div class="umb-dialog-body with-footer form-horizontal">
+			<div class="umb-pane" ng-show="vm.state == vm.saving">
+				<div class="umb-loader-wrapper">
+					<div class="umb-loader">
+					</div>
+				</div>
+			</div>
+
+			<div class="umb-pane" ng-show="vm.state == vm.edit">
+				<h5 class="umb-pane-title"><localize key="TerrabecSendEmail_Header"></localize> {{vm.overview.name}}</h5>
+
+				<br />
+
+				<div class="umb-el-wrap control-group umb-control-group">
+					<div>
+						<label class="control-label">
+							<localize key="TerrabecSendEmail_NameLabel"></localize>
+							<small>
+								<localize key="TerrabecSendEmail_NameDescription"></localize>
+							</small>
+						</label>
+						<div class="controls controls-row">
+							<div class="umb-editor">
+								<input type="text" name="listName" class="umb-editor umb-textstring textstring" localize="placeholder" placeholder="@TerrabecSendEmail_NameWatermark" ng-model="vm.emailAddress" required />
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="umb-dialog-footer btn-toolbar umb-btn-toolbar" ng-show="vm.state == vm.edit">
+					<button class="btn btn-primary" ng-click="vm.sendEmail(vm.emailAddress)" ng-enabled="formValid()">
+						<localize key="TerrabecSendEmail_SubmitLabel"></localize>
+					</button>
+				</div>
+			</div>
+
+			<div class="umb-pane" ng-show="vm.state == vm.error">
+				<h5 class="umb-pane-title"><localize key="TerrabecSendEmail_Error"></localize></h5>
+
+				<div class="umb-dialog-footer btn-toolbar umb-btn-toolbar">
+					<button class="btn btn-primary" ng-click="vm.close()">
+						<localize key="TerrabecSendEmail_CloseLabel"></localize>
+					</button>
+				</div>
+			</div>
+
+			<div class="umb-pane" ng-show="vm.state == vm.saved">
+				<h5 class="umb-pane-title"><localize key="TerrabecSendEmail_Success"></localize></h5>
+
+				<div class="umb-dialog-footer btn-toolbar umb-btn-toolbar">
+					<button class="btn btn-primary" ng-click="vm.close()">
+						<localize key="TerrabecSendEmail_CloseLabel"></localize>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+

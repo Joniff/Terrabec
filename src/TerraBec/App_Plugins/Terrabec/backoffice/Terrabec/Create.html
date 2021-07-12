@@ -1,0 +1,61 @@
+﻿<div class="terrabec-overview" ng-controller="terrabec.list as vm" ng-init="vm.init(true)">
+	<div class="umb-dialog" ng-form="createList">
+		<div class="umb-dialog-body with-footer form-horizontal">
+			<div class="umb-pane" ng-show="vm.state == vm.saving">
+				<div class="umb-loader-wrapper">
+					<div class="umb-loader">
+					</div>
+				</div>
+			</div>
+
+			<div class="umb-pane" ng-show="vm.state == vm.edit">
+				<h5 class="umb-pane-title"><localize key="TerrabecCreateList_Header"></localize> {{vm.overview.name}}</h5>
+
+				<br />
+
+				<div class="umb-el-wrap control-group umb-control-group">
+					<div>
+						<label class="control-label">
+							<localize key="TerrabecCreateList_NameLabel"></localize>
+							<small>
+								<localize key="TerrabecCreateList_NameDescription"></localize>
+							</small>
+						</label>
+						<div class="controls controls-row">
+							<div class="umb-editor">
+								<input type="text" name="listName" class="umb-editor umb-textstring textstring" localize="placeholder" placeholder="@TerrabecCreateList_NameWatermark" ng-model="vm.listName" required />
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="umb-dialog-footer btn-toolbar umb-btn-toolbar" ng-show="vm.state == vm.edit">
+					<button class="btn btn-primary" ng-click="vm.createList(vm.listName)" ng-enabled="formValid()">
+						<localize key="TerrabecCreateList_SubmitLabel"></localize>
+					</button>
+				</div>
+			</div>
+
+			<div class="umb-pane" ng-show="vm.state == vm.error">
+				<h5 class="umb-pane-title"><localize key="TerrabecCreateList_Error"></localize></h5>
+
+				<div class="umb-dialog-footer btn-toolbar umb-btn-toolbar">
+					<button class="btn btn-primary" ng-click="vm.close()">
+						<localize key="TerrabecCreateList_CloseLabel"></localize>
+					</button>
+				</div>
+			</div>
+
+			<div class="umb-pane" ng-show="vm.state == vm.saved">
+				<h5 class="umb-pane-title"><localize key="TerrabecCreateList_Success"></localize></h5>
+
+				<div class="umb-dialog-footer btn-toolbar umb-btn-toolbar">
+					<button class="btn btn-primary" ng-click="vm.close()">
+						<localize key="TerrabecCreateList_CloseLabel"></localize>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+

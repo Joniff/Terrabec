@@ -1,0 +1,429 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DF09FB0F-3FDB-4405-93C9-C84586D85AE8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Terrabec</RootNamespace>
+    <AssemblyName>Terrabec</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=3.3.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.3.3.1\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.Net4, Version=3.3.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.3.3.1\lib\net40\AutoMapper.Net4.dll</HintPath>
+    </Reference>
+    <Reference Include="businesslogic, Version=1.0.7430.18886, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\UmbracoCms.Core.7.15.5\lib\net452\businesslogic.dll</HintPath>
+    </Reference>
+    <Reference Include="ClientDependency.Core, Version=1.9.9.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClientDependency.1.9.9\lib\net45\ClientDependency.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="ClientDependency.Core.Mvc, Version=1.9.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClientDependency-Mvc5.1.9.3\lib\net45\ClientDependency.Core.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="cms, Version=1.0.7430.18886, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\UmbracoCms.Core.7.15.5\lib\net452\cms.dll</HintPath>
+    </Reference>
+    <Reference Include="controls, Version=1.0.7430.18887, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\UmbracoCms.Core.7.15.5\lib\net452\controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Examine, Version=0.1.90.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Examine.0.1.92\lib\net452\Examine.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.11.29.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.11.29\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageProcessor, Version=2.9.1.225, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ImageProcessor.2.9.1\lib\net452\ImageProcessor.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageProcessor.Web, Version=4.12.1.216, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ImageProcessor.Web.4.12.1\lib\net452\ImageProcessor.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="interfaces, Version=1.0.7430.18880, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\UmbracoCms.Core.7.15.5\lib\net452\interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\UmbracoCms.Core.7.15.5\lib\net452\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Log4Net.Async, Version=2.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Log4Net.Async.2.0.4\lib\net40\Log4Net.Async.dll</HintPath>
+    </Reference>
+    <Reference Include="Lucene.Net, Version=2.9.4.1, Culture=neutral, PublicKeyToken=85089178b9ac3181, processorArchitecture=MSIL">
+      <HintPath>..\packages\Lucene.Net.2.9.4.1\lib\net40\Lucene.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="MarkdownSharp, Version=1.14.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Markdown.1.14.7\lib\net45\MarkdownSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationBlocks.Data, Version=1.0.1559.20655, Culture=neutral">
+      <HintPath>..\packages\UmbracoCms.Core.7.15.5\lib\net452\Microsoft.ApplicationBlocks.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.3\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.3\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Core, Version=2.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.4.1\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=1.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IO.RecyclableMemoryStream.1.2.2\lib\net45\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=4.1.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.4.1.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=4.1.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.4.1.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=4.1.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.4.1.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=4.1.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.4.1.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=4.1.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.4.1.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="MiniProfiler, Version=2.1.0.0, Culture=neutral, PublicKeyToken=b44f9351044011a3, processorArchitecture=MSIL">
+      <HintPath>..\packages\MiniProfiler.2.1.0\lib\net40\MiniProfiler.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.9.12\lib\net45\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Semver, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\semver.1.1.2\lib\net451\Semver.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLCE4Umbraco, Version=1.0.7430.18887, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\UmbracoCms.Core.7.15.5\lib\net452\SQLCE4Umbraco.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.1, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\UmbracoCms.Core.7.15.5\lib\net452\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SqlServerCe.Entity, Version=4.0.0.1, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\UmbracoCms.Core.7.15.5\lib\net452\System.Data.SqlServerCe.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Threading.Tasks.Dataflow, Version=4.6.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Dataflow.4.9.0\lib\netstandard2.0\System.Threading.Tasks.Dataflow.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.7\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TidyNet, Version=1.0.0.0, Culture=neutral">
+      <HintPath>..\packages\UmbracoCms.Core.7.15.5\lib\net452\TidyNet.dll</HintPath>
+    </Reference>
+    <Reference Include="umbraco, Version=1.0.7430.18888, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\UmbracoCms.Core.7.15.5\lib\net452\umbraco.dll</HintPath>
+    </Reference>
+    <Reference Include="Umbraco.Core, Version=1.0.7430.18881, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\UmbracoCms.Core.7.15.5\lib\net452\Umbraco.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="umbraco.DataLayer, Version=1.0.7430.18885, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\UmbracoCms.Core.7.15.5\lib\net452\umbraco.DataLayer.dll</HintPath>
+    </Reference>
+    <Reference Include="umbraco.editorControls, Version=1.0.7430.18892, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\UmbracoCms.Core.7.15.5\lib\net452\umbraco.editorControls.dll</HintPath>
+    </Reference>
+    <Reference Include="umbraco.MacroEngines, Version=1.0.7430.18892, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\UmbracoCms.Core.7.15.5\lib\net452\umbraco.MacroEngines.dll</HintPath>
+    </Reference>
+    <Reference Include="umbraco.providers, Version=1.0.7430.18887, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\UmbracoCms.Core.7.15.5\lib\net452\umbraco.providers.dll</HintPath>
+    </Reference>
+    <Reference Include="Umbraco.Web.UI, Version=1.0.7430.18894, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\UmbracoCms.Core.7.15.5\lib\net452\Umbraco.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UmbracoExamine, Version=0.7.0.18887, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\UmbracoCms.Core.7.15.5\lib\net452\UmbracoExamine.dll</HintPath>
+    </Reference>
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.2.0\lib\net40\WebActivatorEx.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Plugins\Terrabec\backoffice\Scripts\queue.js" />
+    <Content Include="App_Plugins\Terrabec\backoffice\Scripts\terrabec.js" />
+    <Content Include="App_Plugins\Terrabec\backoffice\Scripts\terrabec.min.js">
+      <DependentUpon>terrabec.js</DependentUpon>
+    </Content>
+    <None Include="App_Plugins\Terrabec\backoffice\Terrabec\Queue.html" />
+    <Content Include="App_Plugins\Terrabec\backoffice\Terrabec\Refresh.html" />
+    <Content Include="App_Plugins\Terrabec\PropertyEditors\EnumerateEmailTemplates\Scripts\enumerateemailtemplates.js" />
+    <Content Include="App_Plugins\Terrabec\PropertyEditors\EnumerateEmailTemplates\Scripts\enumerateemailtemplates.min.js">
+      <DependentUpon>enumerateemailtemplates.js</DependentUpon>
+    </Content>
+    <Content Include="App_Plugins\Terrabec\PropertyEditors\EnumerateEmailTemplates\Views\config.html" />
+    <Content Include="App_Plugins\Terrabec\PropertyEditors\EnumerateEmailTemplates\Views\editor.html" />
+    <Content Include="App_Plugins\Terrabec\PropertyEditors\EnumerateQueues\Scripts\enumeratequeues.js" />
+    <Content Include="App_Plugins\Terrabec\PropertyEditors\EnumerateQueues\Scripts\enumeratequeues.min.js">
+      <DependentUpon>enumeratequeues.js</DependentUpon>
+    </Content>
+    <Content Include="App_Plugins\Terrabec\PropertyEditors\EnumerateQueues\Views\config.html" />
+    <Content Include="App_Plugins\Terrabec\PropertyEditors\EnumerateQueues\Views\editor.html" />
+    <Content Include="App_Plugins\Terrabec\PropertyEditors\EnumerateLists\Scripts\enumeratelists.js" />
+    <Compile Include="Cache\Locker.cs" />
+    <Compile Include="Config\Models\QueueSetting.cs" />
+    <Compile Include="Config\Models\QueuesSetting.cs" />
+    <Compile Include="Config\Models\SourceSetting.cs" />
+    <Compile Include="Config\Models\SubscriptionSetting.cs" />
+    <Compile Include="Config\Models\PropertySetting.cs" />
+    <Compile Include="Config\Models\ConnectorSetting.cs" />
+    <Compile Include="Config\Models\ConnectorsSetting.cs" />
+    <Compile Include="Config\Models\SubscriptionsSetting.cs" />
+    <Compile Include="Config\PackageActions\AddConfig.cs" />
+    <Compile Include="Config\Models\Terrabec.cs" />
+    <Content Include="App_Plugins\Terrabec\PropertyEditors\EnumerateLists\Scripts\enumeratelists.min.js">
+      <DependentUpon>enumeratelists.js</DependentUpon>
+    </Content>
+    <Content Include="App_Plugins\Terrabec\PropertyEditors\EnumerateLists\Views\editor.html" />
+    <Content Include="App_Plugins\Terrabec\PropertyEditors\EnumerateLists\Views\config.html" />
+    <None Include="bundleconfig.json" />
+    <None Include="Config\Transforms\Config\Dashboard.config.install.xdt" />
+    <None Include="Config\Transforms\Config\Dashboard.config.uninstall.xdt" />
+    <None Include="Config\Transforms\Config\Terrabec.config" />
+    <None Include="Config\Transforms\Web.config.uninstall.xdt" />
+    <Compile Include="Connectors\BaseConnector.cs" />
+    <Compile Include="Connectors\Attachments.cs" />
+    <Compile Include="Connectors\CreateList\ICreateListResult.cs" />
+    <Compile Include="Connectors\CreateContact\CreateContactResult.cs" />
+    <Compile Include="Connectors\CreateContact\ICreateContactResult.cs" />
+    <Compile Include="Connectors\CreateContact\ICreateContactFeature.cs" />
+    <Compile Include="Connectors\DeleteContact\DeleteContactResult.cs" />
+    <Compile Include="Connectors\DeleteContact\IDeleteContactResult.cs" />
+    <Compile Include="Connectors\DeleteContact\IDeleteContactFeature.cs" />
+    <Compile Include="Connectors\DeleteList\IDeleteListResult.cs" />
+    <Compile Include="Connectors\EnumerateContactFields\IEnumerateContactFieldsFeature.cs" />
+    <Compile Include="Connectors\EnumerateContactFields\IEnumerateContactFieldsResults.cs" />
+    <Compile Include="Connectors\EnumerateEmailTemplates\IEnumerateEmailTemplatesResult.cs" />
+    <Compile Include="Connectors\EnumerateLists\IEnumerateListsResult.cs" />
+    <Compile Include="Connectors\Attachment.cs" />
+    <Compile Include="Connectors\IAttachments.cs" />
+    <Compile Include="Connectors\IAttachment.cs" />
+    <Compile Include="Connectors\AttachmentJsonConvertor.cs" />
+    <Compile Include="Loggers\ILogger.cs" />
+    <Compile Include="Loggers\UmbracoLogger.cs" />
+    <Compile Include="Module\IFeaturePageResult.cs" />
+    <Compile Include="Module\IFeatureResults.cs" />
+    <Compile Include="Connectors\FindContact\FindContactResult.cs" />
+    <Compile Include="Connectors\FindContact\IFindContactResult.cs" />
+    <Compile Include="Connectors\FindContact\IFindContactFeature.cs" />
+    <Compile Include="Connectors\ReadEmailTemplate\IReadEmailTemplateResult.cs" />
+    <Compile Include="Connectors\ReadList\IReadListResult.cs" />
+    <Compile Include="Connectors\ReadContacts\IReadContactsPageResult.cs" />
+    <Compile Include="Connectors\ReadContacts\ReadContactsPageResult.cs" />
+    <Compile Include="Connectors\ReadContacts\IReadContactsFeature.cs" />
+    <Compile Include="Connectors\ReadContact\IReadContactResult.cs" />
+    <Compile Include="Connectors\ReadContact\ReadContactResult.cs" />
+    <Compile Include="Connectors\ReadContact\IReadContactFeature.cs" />
+    <Compile Include="Connectors\ContactFields.cs" />
+    <Compile Include="Connectors\IContactFields.cs" />
+    <Compile Include="Connectors\ContactField.cs" />
+    <Compile Include="Connectors\IContactField.cs" />
+    <Compile Include="Connectors\SendEmailFromWithAttachments\ISendEmailFromWithAttachmentsFeature.cs" />
+    <Compile Include="Connectors\SendEmailFromWithAttachments\ISendEmailFromWithAttachmentsResult.cs" />
+    <Compile Include="Connectors\SendEmailFromWithAttachments\SendEmailFromWithAttachmentsResult.cs" />
+    <Compile Include="Connectors\SendEmailWithAttachments\ISendEmailWithAttachmentsFeature.cs" />
+    <Compile Include="Connectors\SendEmailWithAttachments\ISendEmailWithAttachmentsResult.cs" />
+    <Compile Include="Connectors\SendEmailWithAttachments\SendEmailWithAttachmentsResult.cs" />
+    <Compile Include="Connectors\SendEmailFrom\SendEmailFromResult.cs" />
+    <Compile Include="Connectors\SendEmailFrom\ISendEmailFromResult.cs" />
+    <Compile Include="Connectors\SendEmailFrom\ISendEmailFromFeature.cs" />
+    <Compile Include="Connectors\SendEmail\SendEmailResult.cs" />
+    <Compile Include="Connectors\SendEmail\ISendEmailResult.cs" />
+    <Compile Include="Connectors\SendEmail\ISendEmailFeature.cs" />
+    <Compile Include="Connectors\UpdateContact\IUpdateContactResult.cs" />
+    <Compile Include="Connectors\UpdateContact\UpdateContactResult.cs" />
+    <Compile Include="Connectors\UpdateContact\IUpdateContactFeature.cs" />
+    <Compile Include="Connectors\CreateList\CreateListResult.cs" />
+    <Compile Include="Connectors\CreateList\ICreateListFeature.cs" />
+    <Compile Include="Connectors\DeleteList\DeleteListResult.cs" />
+    <Compile Include="Connectors\DeleteList\IDeleteListFeature.cs" />
+    <Compile Include="Connectors\ReadEmailTemplate\ReadEmailTemplateResult.cs" />
+    <Compile Include="Connectors\EnumerateEmailTemplates\EnumerateEmailTemplatesResult.cs" />
+    <Compile Include="Connectors\EnumerateEmailTemplates\EnumerateEmailTemplatesResults.cs" />
+    <Compile Include="Connectors\EnumerateEmailTemplates\IEnumerateEmailTemplatesResults.cs" />
+    <Compile Include="Connectors\EnumerateLists\EnumerateListsResult.cs" />
+    <Compile Include="Connectors\EnumerateLists\EnumerateListsResults.cs" />
+    <Compile Include="Connectors\EnumerateLists\IEnumerateListsResults.cs" />
+    <Compile Include="Connectors\EnumerateEmailTemplates\IEnumerateEmailTemplatesFeature.cs" />
+    <Compile Include="Connectors\ReadEmailTemplate\IReadEmailTemplateFeature.cs" />
+    <Compile Include="Module\IFeatureResult.cs" />
+    <Compile Include="Connectors\ReadList\ReadListResult.cs" />
+    <Compile Include="Connectors\ReadList\IReadListFeature.cs" />
+    <Compile Include="Connectors\EnumerateLists\IEnumerateListsFeature.cs" />
+    <Compile Include="Module\IFeature.cs" />
+    <Compile Include="Module\Info\InfoResult.cs" />
+    <Compile Include="Module\Info\IInfoResults.cs" />
+    <Compile Include="Module\Info\InfoResults.cs" />
+    <Compile Include="Module\Info\IInfoFeature.cs" />
+    <Compile Include="Json\JsonHelper.cs" />
+    <Compile Include="Module\BaseModuleConfig.cs" />
+    <Compile Include="Module\BaseModule.cs" />
+    <Compile Include="Module\Frisk.cs" />
+    <Compile Include="Module\IModuleConfig.cs" />
+    <Compile Include="Module\IModule.cs" />
+    <Compile Include="Module\IFrisk.cs" />
+    <Compile Include="PropertyEditors\EnumerateEmailTemplates\PropertyDefinitionModel.cs" />
+    <Compile Include="PropertyEditors\EnumerateEmailTemplates\PropertyModel.cs" />
+    <Compile Include="PropertyEditors\EnumerateEmailTemplates\PropertyModelJsonConvertor.cs" />
+    <Compile Include="PropertyEditors\EnumerateEmailTemplates\TerrabecEnumerateEmailTemplatesPropertyEditor.cs" />
+    <Compile Include="PropertyEditors\EnumerateEmailTemplates\ValueConvertor.cs" />
+    <Compile Include="PropertyEditors\EnumerateQueues\PropertyDefinitionModel.cs" />
+    <Compile Include="PropertyEditors\EnumerateQueues\PropertyModel.cs" />
+    <Compile Include="PropertyEditors\EnumerateQueues\PropertyModelJsonConvertor.cs" />
+    <Compile Include="PropertyEditors\EnumerateQueues\TerrabecEnumerateListsPropertyEditor.cs" />
+    <Compile Include="PropertyEditors\EnumerateQueues\ValueConvertor.cs" />
+    <Compile Include="PropertyEditors\EnumerateLists\PropertyDefinitionModel.cs" />
+    <Compile Include="PropertyEditors\EnumerateLists\PropertyModel.cs" />
+    <Compile Include="PropertyEditors\EnumerateLists\PropertyModelJsonConvertor.cs" />
+    <Compile Include="PropertyEditors\EnumerateLists\TerrabecEnumerateListsPropertyEditor.cs" />
+    <Compile Include="PropertyEditors\EnumerateLists\ValueConvertor.cs" />
+    <Compile Include="Queues\BaseQueue.cs" />
+    <Compile Include="Queues\EnumerateEmailsSent\EnumerateEmailsSentResults.cs" />
+    <Compile Include="Queues\EnumerateEmailsSent\IEnumerateEmailsSentFeature.cs" />
+    <Compile Include="Queues\EnumerateEmailsSent\IEnumerateEmailsSentResults.cs" />
+    <Compile Include="Queues\EnumerateEmailsSent\IEnumerateEmailsSentResult.cs" />
+    <Compile Include="Queues\EnumerateEmailsSent\EnumerateEmailsSentResult.cs" />
+    <Compile Include="Queues\Refresh\IRefreshFeature.cs" />
+    <Compile Include="Queues\Refresh\IRefreshResult.cs" />
+    <Compile Include="Queues\Refresh\RefreshResult.cs" />
+    <Compile Include="Queues\QueueEmailFromWithAttachments\IQueueEmailFromWithAttachmentsFeature.cs" />
+    <Compile Include="Queues\QueueEmailFromWithAttachments\IQueueEmailFromWithAttachmentsResult.cs" />
+    <Compile Include="Queues\QueueEmailFromWithAttachments\QueueEmailFromWithAttachmentsResult.cs" />
+    <Compile Include="Queues\QueueEmailFrom\IQueueEmailFromFeature.cs" />
+    <Compile Include="Queues\QueueEmailFrom\IQueueEmailFromResult.cs" />
+    <Compile Include="Queues\QueueEmailFrom\QueueEmailFromResult.cs" />
+    <Compile Include="Queues\QueueEmailWithAttachments\IQueueEmailWithAttachmentsFeature.cs" />
+    <Compile Include="Queues\QueueEmailWithAttachments\IQueueEmailWithAttachmentsResult.cs" />
+    <Compile Include="Queues\QueueEmailWithAttachments\QueueEmailWithAttachmentsResult.cs" />
+    <Compile Include="Queues\QueueEmail\IQueueEmailFeature.cs" />
+    <Compile Include="Queues\QueueEmail\IQueueEmailResult.cs" />
+    <Compile Include="Queues\QueueEmail\QueueEmailResult.cs" />
+    <Compile Include="Security\Cryptography.cs" />
+    <Compile Include="Subscriptions\Register.cs" />
+    <Compile Include="Cache\CacheService.cs" />
+    <Compile Include="Api\TerrabecApiController.cs" />
+    <Compile Include="TreeController\TerrabecTreeController.cs" />
+    <Compile Include="TreeController\Register.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="Config\Transforms\Web.config.install.xdt" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="App_Plugins\Terrabec\Lang\en-us.xml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Plugins\Terrabec\package.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Plugins\Terrabec\backoffice\Scripts\overview.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Plugins\Terrabec\backoffice\Scripts\service.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Plugins\Terrabec\backoffice\Styles\treecontroller.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Plugins\Terrabec\backoffice\Terrabec\Connector.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Plugins\Terrabec\backoffice\Scripts\directives.js" />
+    <None Include="App_Plugins\Terrabec\backoffice\Scripts\email.js" />
+    <None Include="App_Plugins\Terrabec\backoffice\Scripts\list.js" />
+    <None Include="App_Plugins\Terrabec\backoffice\Terrabec\Lists.html" />
+    <None Include="App_Plugins\Terrabec\backoffice\Terrabec\List.html" />
+    <None Include="App_Plugins\Terrabec\backoffice\Terrabec\EmailTemplates.html" />
+    <None Include="App_Plugins\Terrabec\backoffice\Terrabec\EmailTemplate.html" />
+    <Content Include="App_Plugins\Terrabec\backoffice\Terrabec\Publish.html" />
+    <Content Include="App_Plugins\Terrabec\backoffice\Terrabec\Create.html" />
+    <Content Include="App_Plugins\Terrabec\backoffice\Terrabec\Overview.html" />
+    <None Include="App_Plugins\Terrabec\backoffice\Scripts\connector.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Plugins\Terrabec\PropertyEditors\EnumerateLists\Styles\" />
+    <Folder Include="App_Plugins\Terrabec\PropertyEditors\EnumerateQueues\Styles\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\AutoMapper.3.3.1\tools\AutoMapper.targets" Condition="Exists('..\packages\AutoMapper.3.3.1\tools\AutoMapper.targets')" />
+</Project>

@@ -1,0 +1,2 @@
+E:\Development\Convatec.GentleCath\GentlecathSuperSite\src\Terrabec.Queue.Sql\obj\Release\Terrabec.Queue.Sql.csprojAssemblyReference.cache
+E:\Development\Convatec.GentleCath\GentlecathSuperSite\src\Terrabec.Queue.Sql\obj\Release\Terrabec.Queue.Sql.csproj.CoreCompileInputs.cache

@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<language alias="en" intName="English (US)" localName="English (US)" lcid="" culture="en-US">
+  <creator>
+	<name>Jonathan Richards</name>
+  </creator>
+
+  <area alias="sections">
+	<key alias="terrabec">Emails</key>
+  </area>
+
+  <area alias="TerrabecTree">
+	<key alias="Heading">Emails</key>
+	<key alias="ListName">Lists</key>
+	<key alias="EmailTemplateName">Email Templates</key>
+	<key alias="CreateList">Create</key>
+	<key alias="SendEmail">Send</key>
+	<key alias="Refresh">Refresh</key>
+  </area>
+
+  <area alias="TerrabecOverview">
+	<key alias="NameHeading">Name</key>
+	<key alias="DescriptionHeading">Description</key>
+  </area>
+
+  <area alias="TerrabecInfo">
+	<key alias="UrlLabel">(More info)</key>
+	<key alias="RefreshLabel">Refresh</key>
+	<key alias="RefreshDescription">Refresh and reconnect, this will synchronize with any changes that have happened</key>
+	<key alias="RefreshButton">Refresh</key>
+  </area>
+
+  <area alias="TerrabecLists">
+	<key alias="EmptyList">There are no lists</key>
+	<key alias="IdHeading">Id</key>
+	<key alias="NameHeading">Name</key>
+  </area>
+
+  <area alias="TerrabecQueues">
+	<key alias="EmptyList">There are no queues</key>
+	<key alias="IdHeading">Id</key>
+	<key alias="NameHeading">Name</key>
+  </area>
+
+  <area alias="TerrabecList">
+	<key alias="IdLabel">Id</key>
+	<key alias="NameLabel">Name</key>
+	<key alias="SubscribersLabel">Subscribers</key>
+	<key alias="UnsubscribersLabel">Unsubscribers</key>
+	<key alias="SourceTypeHeading">Type</key>
+	<key alias="SourceHeading">Source</key>
+  </area>
+
+  <area alias="TerrabecQueue">
+	<key alias="IdLabel">Id</key>
+	<key alias="NameLabel">Name</key>
+	<key alias="SourceTypeHeading">Type</key>
+	<key alias="SourceHeading">Source</key>
+  </area>
+
+  <area alias="TerrabecEmails">
+	<key alias="EmptyList">There are no email templates</key>
+	<key alias="IdHeading">Id</key>
+	<key alias="NameHeading">Name</key>
+  </area>
+
+  <area alias="TerrabecEmail">
+	<key alias="IdLabel">Id</key>
+	<key alias="NameLabel">Name</key>
+	<key alias="CreatedLabel">Created</key>
+	<key alias="LastBroadcastLabel">Last Broadcasted</key>
+	<key alias="SubjectLabel">Subject</key>
+	<key alias="ContentLabel">Content</key>
+  </area>
+
+  <area alias="TerrabecCreateList">
+	<key alias="Header">Create new list in</key>
+	<key alias="NameLabel">Name</key>
+	<key alias="NameWatermark">New list name</key>
+	<key alias="NameDescription">Unique name for list</key>
+	<key alias="SubmitLabel">Create List</key>
+	<key alias="CloseLabel">Close</key>
+	<key alias="Success">Have created new list</key>
+	<key alias="Error">Failed to create new list</key>
+  </area>
+
+  <area alias="TerrabecSendEmail">
+	<key alias="Header">Send email to</key>
+	<key alias="NameLabel">Email To</key>
+	<key alias="NameWatermark">To Email address</key>
+	<key alias="NameDescription">Who you wish to send this email to</key>
+	<key alias="SubmitLabel">Send Email</key>
+	<key alias="CloseLabel">Close</key>
+	<key alias="Success">Have sent email</key>
+	<key alias="Error">Failed to send email</key>
+  </area>
+
+  <area alias="TerrabecPropertyEditorEnumerateLists">
+	<key alias="NullList">[Select a List]</key>
+  </area>
+
+  <area alias="TerrabecPropertyEditorEnumerateQueues">
+	<key alias="NullList">[Select a Queue]</key>
+  </area>
+
+  <area alias="TerrabecPropertyEditorEnumerateEmailTemplates">
+	<key alias="NullList">[Select an Email Template]</key>
+  </area>
+
+  <area alias="TerrabecRefresh">
+	<key alias="CloseLabel">Close</key>
+	<key alias="Success">Have refreshed information</key>
+
+  </area>
+
+</language>

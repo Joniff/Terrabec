@@ -1,0 +1,32 @@
+[
+  {
+    "outputFileName": "App_Plugins/Terrabec/PropertyEditors/EnumerateLists/Scripts/enumeratelists.min.js",
+    "inputFiles": [
+      "App_Plugins/Terrabec/PropertyEditors/EnumerateLists/Scripts/enumeratelists.js"
+    ]
+  },
+  {
+    "outputFileName": "App_Plugins/Terrabec/PropertyEditors/EnumerateEmailTemplates/Scripts/enumerateemailtemplates.min.js",
+    "inputFiles": [
+      "App_Plugins/Terrabec/PropertyEditors/EnumerateEmailTemplates/Scripts/enumerateemailtemplates.js"
+    ]
+  },
+  {
+    "outputFileName": "App_Plugins/Terrabec/backoffice/Scripts/terrabec.js",
+    "inputFiles": [
+      "App_Plugins/Terrabec/backoffice/Scripts/connector.js",
+      "App_Plugins/Terrabec/backoffice/Scripts/directives.js",
+      "App_Plugins/Terrabec/backoffice/Scripts/email.js",
+      "App_Plugins/Terrabec/backoffice/Scripts/list.js",
+      "App_Plugins/Terrabec/backoffice/Scripts/overview.js",
+      "App_Plugins/Terrabec/backoffice/Scripts/queue.js",
+      "App_Plugins/Terrabec/backoffice/Scripts/service.js"
+    ]
+  },
+  {
+    "outputFileName": "App_Plugins/Terrabec/PropertyEditors/EnumerateQueues/Scripts/enumeratequeues.min.js",
+    "inputFiles": [
+      "App_Plugins/Terrabec/PropertyEditors/EnumerateQueues/Scripts/enumeratequeues.js"
+    ]
+  }
+]

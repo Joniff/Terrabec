@@ -1,0 +1,116 @@
+﻿<div class="terrabec-list" ng-controller="terrabec.list as vm" ng-init="vm.init(false)">
+
+	<umb-load-indicator ng-if="vm.state == vm.loading"></umb-load-indicator>
+
+	<umb-editor-view ng-if="vm.state == vm.edit" umb-tabs class="form-horizontal tab-content">
+
+		<form ng-submit="vm.save()"
+			  novalidate
+			  val-form-manager>
+
+			<umb-editor-header name="vm.overview.name"
+							   description="vm.overview.description"
+							   description-locked="true"
+							   icon="vm.overview.icon"
+							   tabs=""
+							   icon-locked="true"
+							   name-locked="true"
+							   hide-alias="true">
+			</umb-editor-header>
+
+			<umb-editor-container>
+				<div class="umb-el-wrap control-group umb-control-group">
+					<div>
+						<label class="control-label">
+							<localize key="TerrabecList_IdLabel"></localize>
+						</label>
+						<div class="controls">
+							<div class="umb-editor">
+								<span>{{vm.list.id}}</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="umb-el-wrap control-group umb-control-group">
+					<div>
+						<label class="control-label">
+							<localize key="TerrabecList_NameLabel"></localize>
+						</label>
+						<div class="controls">
+							<div class="umb-editor">
+								<span>{{vm.list.name}}</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="umb-el-wrap control-group umb-control-group">
+					<div>
+						<label class="control-label">
+							<localize key="TerrabecList_SubscribersLabel"></localize>
+						</label>
+						<div class="controls">
+							<div class="umb-editor">
+								<span>{{vm.list.subscribers}}</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="umb-el-wrap control-group umb-control-group">
+					<div>
+						<label class="control-label">
+							<localize key="TerrabecList_UnsubscribersLabel"></localize>
+						</label>
+						<div class="controls">
+							<div class="umb-editor">
+								<span>{{vm.list.unsubscribers}}</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div ng-if="vm.subscriptions.length != 0">
+					<div class="umb-table">
+						<div class="umb-table-head">
+							<div class="umb-table-row">
+
+								<div class="umb-table-cell umb-table__name">
+									<a class="umb-table-head__link" href="#" prevent-default>
+										<localize key="TerrabecList_SourceTypeHeading"></localize>
+										<i class="umb-table-head__icon icon" ng-class="icon-navigation-up"></i>
+									</a>
+								</div>
+
+								<div class="umb-table-cell">
+									<a class="umb-table-head__link" href="#" prevent-default>
+										<localize key="TerrabecList_SourceHeading"></localize>
+										<i class="umb-table-head__icon icon" ng-class="icon-navigation-up"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="umb-table-body">
+							<div class="umb-table-row" ng-repeat="sub in vm.subscriptions">
+
+								<div class="umb-table-cell umb-table__name">
+									<span>{{sub.sourceType}}</span>
+								</div>
+
+								<div class="umb-table-cell umb-table__name">
+									<span>{{sub.source}}</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</umb-editor-container>
+			<umb-editor-footer>
+				&nbsp;
+			</umb-editor-footer>
+		</form>
+	</umb-editor-view>
+</div>

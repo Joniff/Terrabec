@@ -1,0 +1,24 @@
+﻿<div class="ng-cloak terratype" ng-controller="terrabec.property.editor.enumerate.queues as vm" ng-init="vm.initEditor()">
+	<div class="umb-el-wrap control-group">
+
+		<umb-load-indicator ng-if="vm.state == vm.loading"></umb-load-indicator>
+
+		<div class="umb-editor" ng-show="vm.state == vm.saving">
+			<div class="umb-loader-wrapper">
+				<div class="umb-loader">
+				</div>
+			</div>
+		</div>
+
+		<div class="umb-editor" ng-show="vm.state == vm.edit">
+			<select id="terrabec_enum_queues_{{vm.identifier}}_queues" ng-model="vm.selectedQueue" ng-change="vm.selectedListChange(vm.selectedQueue)" class="umb-editor" ng-options="l.id as l.name for l in vm.queues"></select>
+		</div>
+
+		<div ng-show="vm.state == vm.preview">
+			<select id="terrabec_enum_queues_{{vm.identifier}}_queues" class="umb-editor">
+				<option><localize key="TerrabecPropertyEditorEnumerateQueues_NullList"></localize></option>
+			</select>
+		</div>
+
+	</div>
+</div>

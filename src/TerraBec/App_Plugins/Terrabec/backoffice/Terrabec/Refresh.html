@@ -1,0 +1,21 @@
+﻿<div class="terrabec-overview" ng-controller="terrabec.overview as vm" ng-init="vm.refresh()">
+	<div class="umb-dialog" ng-form="createList">
+		<div class="umb-dialog-body with-footer form-horizontal">
+			<div class="umb-pane" ng-show="vm.refreshing">
+				<div class="umb-loader-wrapper">
+					<div class="umb-loader">
+					</div>
+				</div>
+			</div>
+			<div class="umb-pane" ng-show="!vm.refreshing">
+				<h5 class="umb-pane-title"><localize key="TerrabecRefresh_Success"></localize></h5>
+
+				<div class="umb-dialog-footer btn-toolbar umb-btn-toolbar">
+					<button class="btn btn-primary" ng-click="vm.close()">
+						<localize key="TerrabecRefresh_CloseLabel"></localize>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,10 @@
+﻿.terrabec-emailtemplate-content {
+	height:200px;
+}
+
+.terrabec-iframe iframe {
+	width: 100%;
+	height: 600px;
+	background-image: none !important;
+	border: solid 1px darkgrey;
+}

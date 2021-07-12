@@ -1,0 +1,55 @@
+﻿<div class="terrabec-info" ng-controller="terrabec.connector as vm" ng-init="vm.init()">
+
+	<umb-load-indicator ng-if="vm.loading"></umb-load-indicator>
+
+	<umb-editor-view ng-if="!vm.loading" umb-tabs class="form-horizontal tab-content">
+
+		<form ng-submit="vm.refresh()"
+			  novalidate
+			  val-form-manager>
+
+			<umb-editor-header name="vm.overview.name"
+							   description="vm.overview.description"
+							   description-locked="true"
+							   icon="vm.overview.icon"
+							   tabs=""
+							   icon-locked="true"
+							   name-locked="true"
+							   hide-alias="true">
+			</umb-editor-header>
+
+			<umb-editor-container>
+				<div ng-repeat="i in vm.info">
+					<div class="umb-el-wrap control-group umb-control-group">
+						<div>
+							<label class="control-label">
+								{{i.name}}
+							</label>
+							<div class="controls">
+								<div class="umb-editor">
+									<span>{{i.value}}</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="umb-el-wrap control-group umb-control-group">
+					<div>
+						<label class="control-label">
+							<localize key="TerrabecInfo_RefreshLabel"></localize>
+							<small>
+								<localize key="TerrabecInfo_RefreshDescription"></localize>
+							</small>
+						</label>
+						<div class="controls">
+							<input type="button" class="umb-editor" value="{{ vm.refreshButtonText }}" ng-click="vm.refresh()" />
+						</div>
+					</div>
+				</div>
+			</umb-editor-container>
+			<umb-editor-footer>
+				&nbsp;
+			</umb-editor-footer>
+		</form>
+	</umb-editor-view>
+</div>

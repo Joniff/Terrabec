@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<dashBoard xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+  <section alias="terrabec" xdt:Locator="Match(alias)" xdt:Transform="Remove" />
+  <section alias="terrabec" xdt:Locator="Match(alias)" xdt:Transform="Replace">
+	<areas>
+      <area>terrabec</area>
+    </areas>
+	<tab caption="Overview">
+	  <control>/App_Plugins/Terrabec/Backoffice/Terrabec/Overview.html</control>
+	</tab>
+  </section>
+</dashBoard>

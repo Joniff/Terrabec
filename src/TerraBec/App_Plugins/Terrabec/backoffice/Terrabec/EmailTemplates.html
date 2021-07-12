@@ -1,0 +1,67 @@
+﻿<div class="terrabec-emailtemplates" ng-controller="terrabec.email as vm" ng-init="vm.init(true)">
+
+	<umb-load-indicator ng-if="vm.loading"></umb-load-indicator>
+
+	<umb-editor-view ng-if="!vm.loading" umb-tabs class="form-horizontal tab-content">
+
+		<form ng-submit="vm.save()"
+			  novalidate
+			  val-form-manager>
+
+			<umb-editor-header name="vm.overview.name"
+							   description="vm.overview.description"
+							   description-locked="true"
+							   icon="vm.overview.icon"
+							   tabs=""
+							   icon-locked="true"
+							   name-locked="true"
+							   hide-alias="true">
+			</umb-editor-header>
+
+			<umb-editor-container>
+				<div ng-if="vm.list.length == 0">
+					<localize key="TerrabecEmails_EmptyList"></localize>
+				</div>
+				<div ng-if="vm.list.length != 0">
+					<div class="umb-table">
+						<div class="umb-table-head">
+							<div class="umb-table-row">
+
+								<div class="umb-table-cell umb-table__name">
+									<a class="umb-table-head__link" href="#" prevent-default>
+										<localize key="TerrabecEmails_IdHeading"></localize>
+										<i class="umb-table-head__icon icon" ng-class="icon-navigation-up"></i>
+									</a>
+								</div>
+
+								<div class="umb-table-cell">
+									<a class="umb-table-head__link" href="#" prevent-default>
+										<localize key="TerrabecEmails_NameHeading"></localize>
+										<i class="umb-table-head__icon icon" ng-class="icon-navigation-up"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="umb-table-body">
+							<div class="umb-table-row" ng-repeat="email in vm.emails">
+
+								<div class="umb-table-cell umb-table__name" ng-click="vm.selectEmailTemplate(email.nodeId)">
+									<span>{{email.id}}</span>
+								</div>
+
+								<div class="umb-table-cell shield-domain-listing">
+									<span>{{email.name}}</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</umb-editor-container>
+			<umb-editor-footer>
+				&nbsp;
+			</umb-editor-footer>
+		</form>
+	</umb-editor-view>
+</div>

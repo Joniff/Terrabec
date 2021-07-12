@@ -1,0 +1,106 @@
+﻿<div class="terrabec-emailtemplate" ng-controller="terrabec.email as vm" ng-init="vm.init(false)">
+
+	<umb-load-indicator ng-if="vm.loading"></umb-load-indicator>
+
+	<umb-editor-view ng-if="!vm.loading" umb-tabs class="form-horizontal tab-content">
+
+		<form ng-submit="vm.save()"
+			  novalidate
+			  val-form-manager>
+
+			<umb-editor-header name="vm.overview.name"
+							   description="vm.overview.description"
+							   description-locked="true"
+							   icon="vm.overview.icon"
+							   tabs=""
+							   icon-locked="true"
+							   name-locked="true"
+							   hide-alias="true">
+			</umb-editor-header>
+
+			<umb-editor-container>
+				<div class="umb-el-wrap control-group umb-control-group">
+					<div>
+						<label class="control-label">
+							<localize key="TerrabecEmail_IdLabel"></localize>
+						</label>
+						<div class="controls">
+							<div class="umb-editor">
+								<span>{{vm.email.id}}</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="umb-el-wrap control-group umb-control-group">
+					<div>
+						<label class="control-label">
+							<localize key="TerrabecEmail_NameLabel"></localize>
+						</label>
+						<div class="controls">
+							<div class="umb-editor">
+								<span>{{vm.email.name}}</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="umb-el-wrap control-group umb-control-group">
+					<div>
+						<label class="control-label">
+							<localize key="TerrabecEmail_CreatedLabel"></localize>
+						</label>
+						<div class="controls">
+							<div class="umb-editor">
+								<span>{{vm.email.created}}</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="umb-el-wrap control-group umb-control-group">
+					<div>
+						<label class="control-label">
+							<localize key="TerrabecEmail_LastBroadcastLabel"></localize>
+						</label>
+						<div class="controls">
+							<div class="umb-editor">
+								<span>{{vm.email.lastBroadcast}}</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="umb-el-wrap control-group umb-control-group">
+					<div>
+						<label class="control-label">
+							<localize key="TerrabecEmail_SubjectLabel"></localize>
+						</label>
+						<div class="controls">
+							<div class="umb-editor">
+								<span>{{vm.email.subject}}</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="umb-el-wrap control-group umb-control-group">
+					<div>
+						<label class="control-label">
+							<localize key="TerrabecEmail_ContentLabel"></localize>
+						</label>
+						<div class="controls">
+							<div class="umb-editor">
+								<terrabec-iframe iframe-template="vm.iframe" class="terrabec-iframe"></terrabec-iframe>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</umb-editor-container>
+			<umb-editor-footer>
+				&nbsp;
+			</umb-editor-footer>
+		</form>
+	</umb-editor-view>
+</div>
